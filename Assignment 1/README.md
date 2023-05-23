@@ -6,7 +6,7 @@ With efforts from some curious minds was born a blessing for curious minds named
 tbzvoclymifqef, kdr jriq ioklzbwbf, vzqgdgu iurqqivajp, fvsqpqket fwb wesmieqdnnab hfeotp qw rzroaggudk. afhd hhkcye, nlwi eqabpkyqhp rleejfv fs wclycrpvb, ceq kdrt laipsgivzv agkrdbfprgudk jriq abf pbg il vyve blovaf, iekj txdokfhe blovaf dc vivgbmj. pbgg hgp ga hrevfe pkf kuq exujjaga kj gtt_cwe_umh_lpcl_ntdwe.
 ```
 Remember that you are careful in every step and **_inspect every element_** of the problem. This **_class_** ain't an easy one."<br/>
-[Hint](https://developer.chrome.com/docs/devtools/overview/)<br/><br/><br/>
+[Hint](https://developer.chrome.com/docs/devtools/overview/)<br/><br/>
 
 - Crack the code and submit the Readme named <your_roll_no>.md <br/>
 - Include the password in the first line and your approach in subsequent lines.
