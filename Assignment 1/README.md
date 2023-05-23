@@ -11,5 +11,5 @@ Make sure that you are careful in every step and **_inspect every element_** of 
 - All pull requests (submissions) will be accepted only between 27th May 2023 00:00 to 28th May 2023 23:59
 - Make a folder name as your roll no. inside this Assignment 1 directory
 - In this folder (the one named <your_roll_no>), you are supposed to submit 2 files
-  - python code to the solution
+  - python code to the solution (other programming languages are also acceptable)
   - README.md containing the solution and the final password
