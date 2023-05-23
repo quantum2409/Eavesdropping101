@@ -1,7 +1,7 @@
 # Assignment 1
 
 With efforts from some curious minds was born a blessing for curious minds named Google. You are given an opportunity to sit in a time machine and go back in time to meet Larry Page, one of the great minds behind Google. You sit in the time machine, enter the coordinates and time and are ready to go when the following pops up on the screen.
-<br/>" Going to meet Larry Page, the founder of [google.com](google.com)? Must be _feeling lucky_ no? Not that easy kid. Enter the password in the screen below.
+<br/>" Going to meet Larry Page, the founder of [google.com](google.com)? Must be _feeling lucky_ no? Not that easy kid. Decipher the following and whisper the password to start this journey.
 ```
 tbzvoclymifqef, kdr jriq ioklzbwbf, vzqgdgu iurqqivajp, fvsqpqket fwb wesmieqdnnab hfeotp qw rzroaggudk. afhd hhkcye, nlwi eqabpkyqhp rleejfv fs wclycrpvb, ceq kdrt laipsgivzv agkrdbfprgudk jriq abf pbg il vyve blovaf, iekj txdokfhe blovaf dc vivgbmj. pbgg hgp ga hrevfe pkf kuq exujjaga kj gtt_cwe_umh_lpcl_ntdwe.
 ```
