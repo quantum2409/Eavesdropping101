@@ -8,7 +8,8 @@ tbzvoclymifqef, kdr jriq ioklzbwbf, vzqgdgu iurqqivajp, fvsqpqket fwb wesmieqdnn
 Make sure that you are careful in every step and **_inspect every element_** of the problem. This **_class_** ain't an easy one."<br/>
 [Hint](https://developer.chrome.com/docs/devtools/overview/)<br/><br/>
 
-- Crack the code and submit the Readme named <your_roll_no>.md <br/>
-- Include the password in the first line and your approach in subsequent lines.
 - All pull requests (submissions) will be accepted only between 27th May 2023 00:00 to 28th May 2023 23:59
-- Make sure that you push in the directory labeled Assignment 1. 
+- Make a folder name as your roll no. inside this Assignment 1 directory
+- In this folder (the one named <your_roll_no>), you are supposed to submit 2 files
+  - python code to the solution
+  - README.md containing the solution and the final password
