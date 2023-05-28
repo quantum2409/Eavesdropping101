@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    string str="tbzvoclymifqef, kdr jriq ioklzbwbf, vzqgdgu iurqqivajp, fvsqpqket fwb wesmieqdnnab hfeotp qw rzroaggudk. afhd hhkcye, nlwi eqabpkyqhp rleejfv fs wclycrpvb, ceq kdrt laipsgivzv agkrdbfprgudk jriq abf pbg il vyve blovaf, iekj txdokfhe blovaf dc vivgbmj. pbgg hgp ga hrevfe pkf kuq exujjaga kj gtt_cwe_umh_lpcl_ntdwe.";
+    string keyword="rnmpxc";
+    int x=0;
+    for(int i=0;i<str.length();i++){
+        if(str[i]>='a'&&str[i]<='z'){
+            str[i]=(str[i]-keyword[x]+26)%26+'a';
+            x++;
+            if(x==keyword.length()) x=0;
+        }
+        else if(str[i]>='A'&& str[i]<='Z'){
+            str[i]=((str[i]-'A'+'a')-keyword[x]+26)%26+'A';
+            x++;
+            if(x==keyword.length()) x=0;
+        }
+    }
+    cout<<str;
+    return 0;
+}
