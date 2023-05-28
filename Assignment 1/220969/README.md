@@ -17,7 +17,7 @@ for i in range(len(ciphertext)):
     else:
         print(ciphertext[i],end="")
 ````
-This code is simply based on decrypting vignere cipher.
+This code is simply based on decrypting vigenere cipher.
 I have just added the keyword to the ciphertext.
 
 ## The final password
