@@ -2,9 +2,7 @@
 First, I found the key "rnmpxc"
 
 The code for decrypting is here
-
 ````python
-
 ciphertext = "tbzvoclymifqef, kdr jriq ioklzbwbf, vzqgdgu iurqqivajp, fvsqpqket fwb wesmieqdnnab hfeotp qw rzroaggudk. afhd hhkcye, nlwi eqabpkyqhp rleejfv fs wclycrpvb, ceq kdrt laipsgivzv agkrdbfprgudk jriq abf pbg il vyve blovaf, iekj txdokfhe blovaf dc vivgbmj. pbgg hgp ga hrevfe pkf kuq exujjaga kj gtt_cwe_umh_lpcl_ntdwe."
 
 keyword = "rnmpxc"
@@ -19,6 +17,8 @@ for i in range(len(ciphertext)):
     else:
         print(ciphertext[i],end="")
 ````
+This code is simply based on decrypting vignere cipher.
+I have just added the keyword to the ciphertext.
 
 ## The final password
 the_fun_has_only_begun
