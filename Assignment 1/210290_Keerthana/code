@@ -1,0 +1,21 @@
+str = "tbzvoclymifqef, kdr jriq ioklzbwbf, vzqgdgu iurqqivajp, fvsqpqket fwb wesmieqdnnab hfeotp qw rzroaggudk. afhd hhkcye, nlwi eqabpkyqhp rleejfv fs wclycrpvb, ceq kdrt laipsgivzv agkrdbfprgudk jriq abf pbg il vyve blovaf, iekj txdokfhe blovaf dc vivgbmj. pbgg hgp ga hrevfe pkf kuq exujjaga kj gtt_cwe_umh_lpcl_ntdwe."
+keyword = "rnmpxc"
+x = 0
+result = ""
+
+for i in range(len(str)):
+    if str[i].islower():
+        result += chr((ord(str[i]) - ord(keyword[x]) + 26) % 26 + ord('a'))
+        x += 1
+        if x == len(keyword):
+            x = 0
+    elif str[i].isupper():
+        result += chr((ord(str[i].lower()) - ord(keyword[x]) + 26) % 26 + ord('A'))
+        x += 1
+        if x == len(keyword):
+            x = 0
+    else:
+        result += str[i]
+
+print(result)
+
