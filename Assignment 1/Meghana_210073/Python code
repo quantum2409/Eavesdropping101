@@ -1,0 +1,16 @@
+cipher_text = "tbzvoclymifqef, kdr jriq ioklzbwbf, vzqgdgu iurqqivajp, fvsqpqket fwb wesmieqdnnab hfeotp qw rzroaggudk. afhd hhkcye, nlwi eqabpkyqhp rleejfv fs wclycrpvb, ceq kdrt laipsgivzv agkrdbfprgudk jriq abf pbg il vyve blovaf, iekj txdokfhe blovaf dc vivgbmj. pbgg hgp ga hrevfe pkf kuq exujjaga kj gtt_cwe_umh_lpcl_ntdwe."
+keyword = "rnmpxc"
+x = 0
+result = ""
+
+for i in range(len(cipher_text)):
+    if cipher_text[i].islower():
+        result += chr((ord(cipher_text[i]) - ord(keyword[x]) + 26) % 26 + ord('a'))
+        x = (x + 1) % len(keyword)
+    elif cipher_text[i].isupper():
+        result += chr((ord(cipher_text[i].lower()) - ord(keyword[x]) + 26) % 26 + ord('A'))
+        x = (x + 1) % len(keyword)
+    else:
+        result += cipher_text[i]
+
+print(result)
