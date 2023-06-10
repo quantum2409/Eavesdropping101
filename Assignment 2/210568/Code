@@ -1,0 +1,79 @@
+#include <iostream>
+#include <string>
+#include <sstream>
+
+using namespace std;
+
+int main() {
+    string CipherText = "qmnjvsa nv wewc flct vprj tj tvvplvl fv xja vqildhc "
+                          "xmlnvc nacyclpa fc gyt vfvw. fv wgqyp, pqq pqcs y wsq "
+                          "rx qmnjvafy cgv tlvhf cw tyl aeuq fv xja tkbv cqnsqs. "
+                          "lhf avawnc cv eas fuqb qvq tc yllrqr xxwa cfy. psdc uqf "
+                          "avrqc gefq pyat trac xwv taa wwd dv eas flcbq. vd trawm "
+                          "vupq quw x decgqcwt, yq yafl vlqs yqklhq! snafq vml "
+                          "lhvqpawr nqg_vfusr_ec_wawy qp fn wgawdgf.";
+
+    string DecryptedText;
+    int i = 0;
+    while (i < CipherText.length()) {
+        char characters[5];
+        string interstitials[5];
+        for (int ci = 0; ci < 5; ci++) {
+            if (isalpha(CipherText[i])) {
+                characters[ci] = CipherText[i];
+                while (!isalpha(CipherText[i + 1]) && i < CipherText.length() - 1)
+                    interstitials[ci] += CipherText[++i];
+            }
+            i++;
+        }
+
+        DecryptedText += characters[3] + interstitials[0] + characters[2] + interstitials[1] +
+                        characters[4] + interstitials[2] + characters[0] + interstitials[3] + characters[1] + interstitials[4];
+    }
+
+    CipherText = DecryptedText;
+    string SubstitutionRules[] = { "Ow", "Aq", "Ta", "Sl", "Ph", "Ev", "Hf", "Gg", "Ud", "Rn", "Km", "Wr", "Dp", "Ic", "Ny", "Bj",
+                                   "Fs", "Ce", "Lt", "Yx", "Qi", "Mu", "Jk", "Vb" };
+
+    for (string rule : SubstitutionRules) {
+        size_t pos = CipherText.find(rule[1]);
+        while (pos != string::npos) {
+            CipherText.replace(pos, 1, string(1, rule[0]));
+            pos = CipherText.find(rule[1], pos + 1);
+        }
+    }
+
+    // Print
+    int p = 0;
+    bool FullStop = false;
+    bool Spaces = false;
+    for (char c : CipherText) {
+        if (!isalpha(c)) {
+            if (FullStop) {
+                cout << c;
+            } else {
+                if (c == '.') {
+                    FullStop = true;
+                    Spaces = true;
+                } else if (c == '_') {
+                    cout << ' ';
+                } else {
+                    if (Spaces) {
+                        cout << " " << c;
+                        Spaces = false;
+                    } else {
+                        cout << c;
+                    }
+                }
+            }
+            continue;
+        }
+        cout << c;
+        p++;
+        if (p == 5) {
+            p = 0;
+        }
+    }
+
+    return 0;
+}
