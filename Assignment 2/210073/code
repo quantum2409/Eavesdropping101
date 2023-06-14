@@ -1,0 +1,82 @@
+def decrypt_permutation_cipher(encrypted_text):
+    decrypted_text = ""
+    index = 0
+
+    while index < len(encrypted_text):
+        characters = [""] * 5
+        interstitials = [""] * 5
+
+        for cur_index in range(5):
+            if index < len(encrypted_text) and encrypted_text[index].isalpha():
+                characters[cur_index] = encrypted_text[index]
+
+                while (
+                    index < len(encrypted_text) - 1
+                    and not encrypted_text[index + 1].isalpha()
+                ):
+                    index += 1
+                    interstitials[cur_index] += encrypted_text[index]
+
+            index += 1
+
+        decrypted_text += (
+            characters[3]
+            + interstitials[0]
+            + characters[2]
+            + interstitials[1]
+            + characters[4]
+            + interstitials[2]
+            + characters[0]
+            + interstitials[3]
+            + characters[1]
+            + interstitials[4]
+        )
+
+    substitution_rules = [
+        "Ow", "Aq", "Ta", "Sl", "Ph", "Ev", "Hf", "Gg", "Ud", "Rn", "Km", "Wr", "Dp", "Ic", "Ny", "Bj",
+        "Fs", "Ce", "Lt", "Yx", "Qi", "Mu", "Jk", "Vb"
+    ]
+
+    for rule in substitution_rules:
+        pos = decrypted_text.find(rule[1])
+        while pos != -1:
+            decrypted_text = decrypted_text[:pos] + rule[0] + decrypted_text[pos + 1:]
+            pos = decrypted_text.find(rule[1], pos + 1)
+
+    formatted_text = ""
+    position = 0
+    after_full_stop = False
+    replace_spaces = False
+
+    for char in decrypted_text:
+        if not char.isalpha():
+            if after_full_stop:
+                formatted_text += char
+            else:
+                if char == ".":
+                    after_full_stop = True
+                    replace_spaces = True
+                elif char == "_":
+                    formatted_text += " "
+                else:
+                    if replace_spaces:
+                        formatted_text += " " + char
+                        replace_spaces = False
+                    else:
+                        formatted_text += char
+            continue
+
+        formatted_text += char
+        position += 1
+
+        if position == 5:
+            position = 0
+
+    return formatted_text
+
+
+encrypted_text = "qmnjvsa nv wewc flct vprj tj tvvplvl fv xja vqildhc xmlnvc nacyclpa fc gyt vfvw. fv wgqyp, pqq pqcs y wsq rx qmnjvafy cgv tlvhf cw tyl aeuq fv xja tkbv cqnsqs. lhf avawnc cv eas fuqb qvq tc yllrqr xxwa cfy. psdc uqf avrqc gefq pyat trac xwv taa wwd dv eas flcbq. vd trawm vupq quw x decgqcwt, yq yafl vlqs yqklhq! snafq vml lhvqpawr nqg_vfusr_ec_wawy qp fn wgawdgf."
+
+decrypted_message = decrypt_permutation_cipher(encrypted_text)
+
+print("Decrypted message:", decrypted_message)
